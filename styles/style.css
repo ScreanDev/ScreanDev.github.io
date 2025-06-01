@@ -51,12 +51,12 @@ body {
 .main-big-title-section {
     width: 100%;
     margin-top: 5em;
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 
 #main-big-title {
-    font-size: 3vw;
+    font-size: 3em;
     font-weight: 400;
     font-family: DM Serif Text;
     color: #000000;
@@ -66,26 +66,64 @@ body {
 }
 
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2em;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+
 .section-block {
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     box-shadow: #0000003f 0px 0px 10px;
     border-radius: 10px;
-    border-left: 7px solid #2980b9;
     padding: 2em;
 }
 
-.left-block {
-    margin-left: 2em;
+.section-block .left-container {
+    margin-left: 0;
+    justify-content: flex-start;
+    text-align: left;
+    border-left: 7px solid #2980b9;
+}
+
+.section-block .right-container {
+    margin-right: 0;
+    justify-content: flex-end;
+    text-align: right;
+    border-right: 7px solid #2980b9;
+}
+
+.center-container {
+    margin: 0 auto;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.left-container {
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-direction: row;
+    text-align: left;
+    gap: 5em;
+}
+
+.right-container {
+    margin-right: 0;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    text-align: right;
+    gap: 5em;
 }
 
 .section-block h2 {
     font-size: 2em;
     color: rgb(14, 39, 182);
-    text-align: left;
     padding-bottom: 5E-1em;
     font-family: Lexend;
 }
@@ -94,18 +132,16 @@ body {
     font-size: 1em;
     font-family: Outfit;
     color: rgb(14, 129, 182);
-    text-align: left;
     padding-bottom: 5E-1em;
+    border-bottom: 2px solid #2980b9;
 }
 
 .section-block p {
     font-size: 1em;
     font-family: Poppins;
     font-weight: 500;
-    border-top: 2px solid #2980b9;
     padding-top: 15E-1em;
     color: rgb(4, 0, 44);
-    text-align: left;
 }
 
 
