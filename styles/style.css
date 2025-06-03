@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    cursor: pointer;
+}
+
 .header {
     width: 100%;
     height: 8em;
@@ -281,7 +285,6 @@ to {
     height: 180px;
     object-fit: cover;
 }
-
 .project-card h3 {
     font-size: 1.2em;
     margin: 1em;
@@ -329,4 +332,90 @@ to {
 .red-tag {
     background-color: #ffe0e0;
     color: #b22222;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 1000;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    width: 85%;
+    height: 85%;
+    box-shadow: 0 0 20px #00000066;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 0.8em;
+    right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #888;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-radius: 50%; /* Cercle */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: rgba(200, 200, 200, 0.3); /* effet surbrillance */
+    color: #000;
+}
+
+
+.modal-content h2 {
+    font-size: 2em;
+    color: rgb(14, 39, 182);
+    padding-bottom: 5E-1em;
+    font-family: Lexend;
+}
+
+.modal-content h3 {
+    font-size: 1em;
+    font-family: Outfit;
+    color: rgb(14, 129, 182);
+    padding-bottom: 5E-1em;
+    border-bottom: 2px solid #2980b9;
+}
+
+.modal-content p {
+    font-size: 1em;
+    font-family: Poppins;
+    font-weight: 500;
+    padding-top: 15E-1em;
+    color: rgb(4, 0, 44);
+}
+
+.modal-content .tag-list {
+    font-size: 12E-1em;
 }
