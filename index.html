@@ -28,7 +28,7 @@
         <section class="section-block" style="width: 70%;">
             <h2>Ne grillons pas les étapes...</h2>
             <h3>et permettez-moi tout d'abord de me présenter.</h3>
-            <p>Je m'appelle Lucas Pausé-Chapuis, j'ai 18 ans et je suis étudiant en première année de BUT Informatique à l'<a href="https://www.iut-orsay.universite-paris-saclay.fr">IUT d'Orsay</a>. J'habite en Essonne.</p>
+            <p>Je m'appelle Lucas Pausé-Chapuis, j'ai 18 ans et je suis étudiant en première année de BUT Informatique à l'<a href="https://www.iut-orsay.universite-paris-saclay.fr" target=”_blank”>IUT d'Orsay</a>. J'habite en Essonne.</p>
             <p><i class="fa-solid fa-desktop"></i> Passionné par l'informatique depuis mes onze ans, j'ai toujours été fasciné par la manière dont les technologies peuvent transformer notre quotidien.</p>
             <p><i class="fa-solid fa-pencil"></i> Avide de créativité et d'expérimentation, j'ai conçu de nombreux projets pour me perfectionner dans ce domaine.</p>
             <p><i class="fa-solid fa-circle-question"></i> Aujourd'hui, je suis à la recherche d'une alternance dans le développement pour une période de 24 mois.</p>
@@ -66,6 +66,9 @@
                 <span class="tag red-tag">En cours !</span>
                 <span class="tag blue-tag">Jeu</span>
                 <span class="tag blue-tag">Projet personnel</span>
+                <span class="tag purple-tag">Godot</span>
+                <span class="tag purple-tag">GDScript</span>
+                <span class="tag purple-tag">C++</span>
             </div>
             <h3>FrostHorn</h3>
             <p>Un jeu d'aventure post-apocalyptique en 2D au cœur d'une histoire dans laquelle le joueur doit explorer et innover pour obtenir la Corne d'Abondance. Créé avec le moteur de jeu Godot.</p>
@@ -86,14 +89,21 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-projet1')">&times;</span>
             <h2>FrostHorn</h2>
-            <h3>Le projet de jeu vidéo le plus ambitieux que je sois en train de réaliser.</h3>
+            <h3>Le projet de jeu vidéo (et au sens large informatique) le plus ambitieux que je réalise.</h3>
+            <img class="banner" src="images/projet-frosthorn.png" alt="FrostHorn" class="project-image">
             <div class="tag-list">
                 <span class="tag red-tag">En cours !</span>
                 <span class="tag blue-tag">Jeu</span>
                 <span class="tag blue-tag">Projet personnel</span>
+                <span class="tag purple-tag">Godot</span>
+                <span class="tag purple-tag">GDScript</span>
+                <span class="tag purple-tag">C++</span>
             </div>
-            <p>FrostHorn est sans nul doute le plus gros projet informatique que je sois en train de développer.</p>
-            <a href="https://github.com/U-Night/FrostHorn" target=”_blank”><i class="fa-solid fa-arrow-right"></i> Lien vers GitHub</a>
+            <p>• FrostHorn est sans nul doute le projet informatique le plus important que je développe actuellement. Ce projet, conçu au sein d'une équipe de neuf personnes, a pour but de concevoir un jeu vidéo d'aventure, de construction et de gestion, en deux dimensions, dans un univers anéanti par une guerre sans précédent.</p>
+            <p>• Ce jeu mêle l'aspect créatif, le goût du développement et la coordination en équipe. Nous utilisons <a href="https://github.com/U-Night/FrostHorn" target=”_blank”>GitHub</a> pour faire évoluer le jeu, avons un serveur Discord dans lequel chacun contribue à l'apport d'idées. Organiser le travail d'équipe ? C'est possible grâce aux outils de <a href="https://www.notion.com/fr" target=”_blank”>Notion</a>. Enfin, nous organisons mensuellement des réunions physiques dans notre bibliothèque universitaire pour marquer l'avancement du projet et plancher sur les prochaines tâches !</p>
+            <p>• Le projet étant relativement récent, nous n'avons pas encore de prototype complet de jeu, mais nous préparons le terrain. Le jeu utilisera le moteur de jeu <b>Godot</b>.</p>
+            <img src="images/projet-frosthorn-logo-corne.png" alt="FrostHorn" class="project-image" style="width: 200px;">
+            <p><a href="https://github.com/U-Night/FrostHorn" target=”_blank”><i class="fa-solid fa-arrow-right"></i> Lien vers GitHub</a></p>
         </div>
     </div>
 
@@ -102,6 +112,7 @@
             <span class="close-btn" onclick="closeModal('modal-projet2')">&times;</span>
             <h2>Projet 2</h2>
             <h3></h3>
+            <img class="banner" src="images/universite.jpg" alt="Projet 2" class="project-image">
             <p>Ce projet n'a pas encore de description.</p>
         </div>
     </div>
@@ -111,17 +122,20 @@
 function openModal(id) {
     const modal = document.getElementById(id);
     modal.classList.add("show");
+    document.body.classList.add("modal-open");
 }
 
 function closeModal(id) {
     const modal = document.getElementById(id);
     modal.classList.remove("show");
+    document.body.classList.remove("modal-open");
 }
 
 window.addEventListener("click", function (e) {
     document.querySelectorAll(".modal").forEach(modal => {
         if (e.target === modal) {
             modal.classList.remove("show");
+            document.body.classList.remove("modal-open");
         }
     });
 });
