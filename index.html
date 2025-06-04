@@ -50,6 +50,42 @@
 
     <hr class="animated-hr center-aligned" style="width: 90%;">
 
+    <div id="skills" class="skills-section">
+        <section class="title-block">
+            <h2>Mes compétences</h2>
+            <h3></h3>
+        </section>
+
+        <div class="skills-container">
+            <div class="skills-block hard-skills">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>Python, C++, Java, Javascript</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>GitHub, GitLab</li>
+                    <li>SQL, Systèmes de gestion de bases de données</li>
+                    <li>Outils de développement : VS Code, GitBash, Code::Blocks, Eclipse</li>
+                    <li>API, Frameworks : Godot, Unreal Engine</li>
+                    <li>Pack Office</li>
+                </ul>
+            </div>
+
+            <div class="skills-block soft-skills">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Investissement</li>
+                    <li>Créativité</li>
+                    <li>Polyvalence</li>
+                    <li>Réactivité</li>
+                    <li>À l'écoute</li>
+                    <li>Esprit critique</li>
+                    <li>Persévérance</li>
+                    <li>Coopération, travail en équipe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container left-container">
         <section id="projects" class="title-block">
             <h2>Mes projets</h2>
@@ -77,7 +113,7 @@
             <a onclick="openModal('modal-projet1')">Voir plus</a>
         </div>
         <div class="project-card">
-            <img src="images/universite.jpg" alt="Projet 2">
+            <img src="images/projet-yld.png" alt="Projet 2">
             <div class="tag-list">
                 <span class="tag blue-tag">Projet personnel</span>
                 <span class="tag blue-tag">Application</span>
@@ -85,7 +121,7 @@
                 <span class="tag purple-tag">Python</span>
                 <span class="tag purple-tag">HTML</span>
                 <span class="tag purple-tag">Javascript</span>
-                <span class="tag purple-tag">APIs</span>
+                <span class="tag purple-tag">API</span>
             </div>
             <h3>YouTube Local Downloader</h3>
             <p>Une application permettant de télécharger des contenus sur YouTube en local, et son site intranet.</p>
@@ -96,6 +132,7 @@
     </section>
 
 
+    <!-- Modals pour les projets -->
     <div class="modal" id="modal-projet1">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-projet1')">&times;</span>
@@ -127,7 +164,7 @@
             <span class="close-btn" onclick="closeModal('modal-projet2')">&times;</span>
             <h2>YouTube Local Downloader</h2>
             <h3>Une application permettant de télécharger des contenus sur YouTube en local, et son site intranet.</h3>
-            <img class="banner" src="images/universite.jpg" alt="Projet 2" class="project-image">
+            <img class="banner" src="images/projet-yld-banniere.png" alt="Projet 2" class="project-image">
             <div class="tag-list">
                 <span class="tag blue-tag">Projet personnel</span>
                 <span class="tag blue-tag">Application</span>
@@ -135,10 +172,16 @@
                 <span class="tag purple-tag">Python</span>
                 <span class="tag purple-tag">HTML</span>
                 <span class="tag purple-tag">Javascript</span>
-                <span class="tag purple-tag">APIs</span>
+                <span class="tag purple-tag">API</span>
+                <span class="tag purple-tag">Json</span>
             </div>
             <p>• YouTube Local Downloader est un projet personnel visant à concevoir une application de téléchargement de vidéos YouTube aux formats MP4 et MP3.</p>
-            <p>Ce projet d'expérimentation - n'ayant jamais été déployé ni mis à jour - est malheureusement obsolète en raison de modifications réalisées sur l'API. Toutefois, vous pouvez télécharger l'exécutable dans les liens annexes si vous souhaitez essayer et naviguer dans l'application !</p>
+            <p>• J'ai majoritairement utilisé le langage Python pour concevoir l'interface graphique. La fonction de téléchargement des vidéos est quant à elle gérée par la librairie PyTube qui exploite l'API de YouTube.</p>
+            <img src="images/projet-yld.png" style="width: 600px;">
+            <img src="images/projet-yld-site.png" style="width: 600px;">
+            <p>L'application est axée sur la facilité et aide l'utilisateur, par exemple via un site intranet (local et non déployé sur Internet) que l'utilisateur peut consulter à partir de l'application pour trouver des aides.</p>
+            <img src="images/yld-aide-gif.gif" style="width: 500px;">
+            <p>• Ce projet d'expérimentation - n'ayant jamais été déployé ni mis à jour - est malheureusement obsolète en raison de modifications réalisées sur l'API. Toutefois, vous pouvez télécharger l'exécutable dans les liens annexes si vous souhaitez essayer et naviguer dans l'application !</p>
         </div>
     </div>
 </body>
