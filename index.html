@@ -15,7 +15,7 @@
         <div class="inner-header">
             <h2><i class="fa-solid fa-house"></i></i> À propos de moi</h2>
             <h2><a href="#projects" class="nav-link"><i class="fa-solid fa-folder-open"></i> Mes projets</a></h2>
-            <h2><i class="fa-solid fa-envelope"></i> Contactez-moi</h2>
+            <h2><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contactez-moi</a></h2>
         </div>
     </div>
     <section class="main-big-title-section">
@@ -48,7 +48,60 @@
         </section>
     </div>
 
+
     <hr class="animated-hr center-aligned" style="width: 90%;">
+
+
+    <div id="skills" class="skills-section">
+        <section class="title-block">
+            <h2>Formations</h2>
+            <h3></h3>
+        </section>
+
+        <section class="timeline-section">
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="content-block">
+                        <img src="images/universite.jpg" alt="Logo BUT Informatique">
+                        <div class="timeline-degree-info">
+                            <h3 class="timeline-degree-header">BUT Informatique</h3>
+                            <p><b>IUT d'Orsay – 2024 à aujourd’hui</b></p>
+                            <p>Parcours A : développement d'applications</p>
+                        </div>
+                    </div>
+                    <div class="arrow">&#x2193;</div> <!-- Flèche vers le bas -->
+                </div>
+
+                <div class="timeline-item">
+                    <div class="content-block">
+                        <img src="images/logo-lycee.png" alt="Logo Lycée Marguerite Yourcenar">
+                        <div class="timeline-degree-info">
+                            <h3>Baccalauréat Général : Mention Bien</h3>
+                            <p><b>Lycée Marguerite Yourcenar – 2021 à 2024</b></p>
+                            <p>Spécialités : NSI, Mathématiques, Physique-Chimie</p>
+                        </div>
+                    </div>
+                    <div class="arrow">&#x2193;</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="content-block">
+                        <div class="timeline-degree-info">
+                            <h3>Brevet des collèges : Mention Très bien</h3>
+                            <p><b>Collège Les Dînes Chiens – 2017 à 2021</b></p>
+                        </div>
+                    </div>
+                <!-- Dernier bloc sans flèche -->
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+    <hr class="animated-hr center-aligned" style="width: 90%;">
+
 
     <div id="skills" class="skills-section">
         <section class="title-block">
@@ -86,8 +139,10 @@
         </div>
     </div>
 
-    <div class="container left-container">
-        <section id="projects" class="title-block">
+    <hr class="animated-hr center-aligned" style="width: 90%;">
+
+    <div id="projects" class="container left-container">
+        <section class="title-block">
             <h2>Mes projets</h2>
             <h3></h3>
             <p>Vous trouverez ici quelques-uns des projets sur lesquels j'ai travaillé.</p>
@@ -98,7 +153,7 @@
     <h3 class="project-container-title"><i class="fa-solid fa-code"></i> Projets informatiques</h3>
     <div class="project-container">
         <div class="project-card">
-            <img src="images/projet-frosthorn.png" alt="Projet 1">
+            <img src="images/projet-frosthorn.png" alt="FrostHorn">
             <div class="tag-list">
                 <span class="tag red-tag">En cours !</span>
                 <span class="tag blue-tag">Jeu</span>
@@ -113,7 +168,7 @@
             <a onclick="openModal('modal-projet1')">Voir plus</a>
         </div>
         <div class="project-card">
-            <img src="images/projet-yld.png" alt="Projet 2">
+            <img src="images/projet-yld.png" alt="YouTube Local Downloader">
             <div class="tag-list">
                 <span class="tag blue-tag">Projet personnel</span>
                 <span class="tag blue-tag">Application</span>
@@ -153,6 +208,8 @@
             <p>• Le projet étant relativement récent, nous n'avons pas encore de prototype complet de jeu, mais nous préparons le terrain. Le jeu utilisera le moteur de jeu <b>Godot</b>.</p>
             <p>• Nous prévoyons également très rapidement d'ajouter une documentation à notre jeu en déployant un site statique. Pour ce faire, nous utilisons l'outil <a href="https://docusaurus.io" target=”_blank”>Docusaurus</a>, ainsi que le langage Node.Js. Le lien GitHub vous est fourni en bas de cette page !</p>
             <img src="images/projet-frosthorn-logo-corne.png" alt="FrostHorn" class="project-image" style="width: 200px;">
+            <img src="images/projet-frosthorn-reunion.png" alt="FrostHorn" class="project-image" style="width: 300px;">
+            <img src="images/projet-frosthorn-textures.png" alt="FrostHorn" class="project-image" style="width: 300px;">
             <h4><i class="fa-solid fa-link"></i> Liens annexes</h4>
             <p class="link"><a href="https://github.com/U-Night/FrostHorn" target=”_blank”><i class="fa-brands fa-github"></i> GitHub du projet</a></p>
             <p class="link"><a href="https://github.com/U-Night/wiki" target=”_blank”><i class="fa-solid fa-book"></i> GitHub de la documentation</a></p>
@@ -181,10 +238,52 @@
             <img src="images/projet-yld-site.png" style="width: 600px;">
             <p>L'application est axée sur la facilité et aide l'utilisateur, par exemple via un site intranet (local et non déployé sur Internet) que l'utilisateur peut consulter à partir de l'application pour trouver des aides.</p>
             <img src="images/yld-aide-gif.gif" style="width: 500px;">
-            <p>• Ce projet d'expérimentation - n'ayant jamais été déployé ni mis à jour - est malheureusement obsolète en raison de modifications réalisées sur l'API. Toutefois, vous pouvez télécharger l'exécutable dans les liens annexes si vous souhaitez essayer et naviguer dans l'application !</p>
+            <p>• Ce projet d'expérimentation - n'ayant jamais été déployé ni mis à jour - est malheureusement obsolète en raison de modifications réalisées sur l'API. Toutefois, vous pouvez accéder à la page GitHub du projet si vous souhaitez télécharger, essayer et naviguer dans l'application !</p>
+            <h4><i class="fa-solid fa-link"></i> Liens annexes</h4>
+            <p class="link"><a href="https://github.com/ScreanDev/youtube-local-downloader" target=”_blank”><i class="fa-brands fa-github"></i> GitHub du projet</a></p>
         </div>
     </div>
+
+
+    <section id="contact" class="contact-section">
+        <div class="container right-container">
+            <section class="title-block">
+                <h2>Rentrons en contact</h2>
+                <h3></h3>
+                <p>Vous souhaitez me contacter ? Voici mes informations !</p>
+            </section>
+        </div>
+        <div class="contact-container">
+            <div class="contact-block" onclick="copyToClipboard(this)">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Téléphone</h3>
+                <p>07 64 20 49 26</p>
+            </div>
+            <div class="contact-block" onclick="copyToClipboard(this)">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email personnel</h3>
+                <p><a href="mailto:lucas.pausechapuis91@gmail.com">lucas.pausechapuis91@gmail.com</a></p>
+            </div>
+            <div class="contact-block" onclick="copyToClipboard(this)">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email universitaire</h3>
+                <p>lucas.pause-chapuis@universite-paris-saclay.fr</p>
+            </div>
+            <div class="contact-block">
+                <i class="fa-brands fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/lucas-pausé-chapuis-3a438432b/" target="_blank">Voir mon profil</a></p>
+            </div>
+        </div>
+
+        <!-- Zone pour la notification -->
+        <div id="copy-notification">Copié dans le presse-papiers !</div>
+    </section>
 </body>
+
+
+
+
 
 <script>
 function openModal(id) {
@@ -207,6 +306,36 @@ window.addEventListener("click", function (e) {
         }
     });
 });
+
+function copyToClipboard(element) {
+  const textToCopy = element.querySelector("p").innerText;
+
+  navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+      alert("Texte copié : " + textToCopy);
+    })
+    .catch(err => {
+      console.error("Erreur lors de la copie :", err);
+    });
+}
+
+
+function copyToClipboard(element) {
+  const textToCopy = element.querySelector("p").innerText;
+
+  navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+      const notif = document.getElementById("copy-notification");
+      notif.classList.add("show");
+      setTimeout(() => {
+        notif.classList.remove("show");
+      }, 2000); // Disparaît après 2 secondes
+    })
+    .catch(err => {
+      console.error("Erreur lors de la copie :", err);
+    });
+}
+
 </script>
 
 
