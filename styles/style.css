@@ -353,6 +353,11 @@ to {
     color: #6a1b9a;
 }
 
+.orange-tag {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
 
 .modal {
     position: fixed;
@@ -597,6 +602,22 @@ body.modal-open {
     font-weight: 600;
 }
 
+
+.degree-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+}
+
+.degree-separator {
+    flex: 1 1 45%; /* chaque bloc prendra environ 45% de la largeur */
+    min-width: 300px; /* assure une bonne largeur minimale en responsive */
+}
+
+
 .timeline-section {
   padding: 4em 2em;
   text-align: center;
@@ -630,7 +651,7 @@ body.modal-open {
 }
 
 .timeline-degree-info {
-    padding: 1.5em;;
+    padding: 1.5em;
 }
 
 .content-block h3 {

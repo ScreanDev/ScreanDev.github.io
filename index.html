@@ -13,7 +13,8 @@
 <body>
     <div class="header">
         <div class="inner-header">
-            <h2><i class="fa-solid fa-house"></i></i> À propos de moi</h2>
+            <h2><a href="#degree" class="nav-link"><i class="fa-solid fa-user-graduate"></i> Formations</a></h2>
+            <h2><a href="#skills" class="nav-link"><i class="fa-solid fa-star"></i> Compétences</a></h2>
             <h2><a href="#projects" class="nav-link"><i class="fa-solid fa-folder-open"></i> Mes projets</a></h2>
             <h2><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contactez-moi</a></h2>
         </div>
@@ -52,50 +53,79 @@
     <hr class="animated-hr center-aligned" style="width: 90%;">
 
 
-    <div id="skills" class="skills-section">
-        <section class="title-block">
-            <h2>Formations</h2>
-            <h3></h3>
+    <div id="degree" class="degree-section">
+        <section class="degree-separator">
+            <section class="title-block">
+                <h2>Formations</h2>
+                <h3></h3>
+            </section>
+
+            <section class="timeline-section">
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="content-block">
+                            <img src="images/universite.jpg" alt="Logo BUT Informatique">
+                            <div class="timeline-degree-info">
+                                <h3 class="timeline-degree-header">BUT Informatique</h3>
+                                <p><b>IUT d'Orsay – 2024 à aujourd’hui</b></p>
+                                <p>Parcours A : développement d'applications</p>
+                            </div>
+                        </div>
+                        <div class="arrow">&#x2193;</div> <!-- Flèche vers le bas -->
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content-block">
+                            <img src="images/logo-lycee.png" alt="Logo Lycée Marguerite Yourcenar">
+                            <div class="timeline-degree-info">
+                                <h3>Baccalauréat Général : Mention Bien</h3>
+                                <p><b>Lycée Marguerite Yourcenar – 2021 à 2024</b></p>
+                                <p>Spécialités : NSI, Mathématiques, Physique-Chimie</p>
+                            </div>
+                        </div>
+                        <div class="arrow">&#x2193;</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content-block">
+                            <img src="images/logo-college.jpg" alt="Logo Lycée Marguerite Yourcenar">
+                            <div class="timeline-degree-info">
+                                <h3>Brevet des collèges : Mention Très bien</h3>
+                                <p><b>Collège Les Dînes Chiens – 2017 à 2021</b></p>
+                            </div>
+                        </div>
+                    <!-- Dernier bloc sans flèche -->
+                    </div>
+
+                </div>
+            </section>
         </section>
+        <section class="degree-separator">
+            <section class="title-block">
+                <h2>Expériences professionnelles</h2>
+                <h3></h3>
+            </section>
 
-        <section class="timeline-section">
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="content-block">
-                        <img src="images/universite.jpg" alt="Logo BUT Informatique">
-                        <div class="timeline-degree-info">
-                            <h3 class="timeline-degree-header">BUT Informatique</h3>
-                            <p><b>IUT d'Orsay – 2024 à aujourd’hui</b></p>
-                            <p>Parcours A : développement d'applications</p>
+            <section class="timeline-section">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="content-block">
+                            <img src="images/logo-razel-bec.jpg" alt="Logo Lycée Marguerite Yourcenar">
+                            <div class="timeline-degree-info">
+                                <h3>Stage d'observation chez Razel-Bec</h3>
+                                <p><b>Razel-Bec | Groupe Fayat – 2021</b></p>
+                                <p>• Secteur informatique</p>
+                                <p>• Génie civil</p>
+                                <p>• Laboratoire</p>
+                                <p>• Coordination d'équipe</p>
+                            </div>
                         </div>
+                    <!-- Dernier bloc sans flèche -->
                     </div>
-                    <div class="arrow">&#x2193;</div> <!-- Flèche vers le bas -->
-                </div>
 
-                <div class="timeline-item">
-                    <div class="content-block">
-                        <img src="images/logo-lycee.png" alt="Logo Lycée Marguerite Yourcenar">
-                        <div class="timeline-degree-info">
-                            <h3>Baccalauréat Général : Mention Bien</h3>
-                            <p><b>Lycée Marguerite Yourcenar – 2021 à 2024</b></p>
-                            <p>Spécialités : NSI, Mathématiques, Physique-Chimie</p>
-                        </div>
-                    </div>
-                    <div class="arrow">&#x2193;</div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="content-block">
-                        <div class="timeline-degree-info">
-                            <h3>Brevet des collèges : Mention Très bien</h3>
-                            <p><b>Collège Les Dînes Chiens – 2017 à 2021</b></p>
-                        </div>
-                    </div>
-                <!-- Dernier bloc sans flèche -->
-                </div>
-
-            </div>
+            </section>
         </section>
     </div>
 
@@ -111,7 +141,7 @@
 
         <div class="skills-container">
             <div class="skills-block hard-skills">
-                <h3>Hard Skills</h3>
+                <h3><i class="fa-solid fa-power-off"></i> Hard Skills</h3>
                 <ul>
                     <li>Python, C++, Java, Javascript</li>
                     <li>HTML, CSS, JavaScript</li>
@@ -124,7 +154,7 @@
             </div>
 
             <div class="skills-block soft-skills">
-                <h3>Soft Skills</h3>
+                <h3><i class="fa-solid fa-certificate"></i> Soft Skills</h3>
                 <ul>
                     <li>Investissement</li>
                     <li>Créativité</li>
@@ -134,6 +164,29 @@
                     <li>Esprit critique</li>
                     <li>Persévérance</li>
                     <li>Coopération, travail en équipe</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <div class="skills-block languages">
+                <h3><i class="fa-solid fa-language"></i> Langues</h3>
+                <ul>
+                    <li>Français : Langue maternelle</li>
+                    <li>Anglais : Niveau C1</li>
+                    <li>Espagnol : Niveau B1</li>
+                </ul>
+            </div>
+
+            <div class="skills-block hobbies">
+                <h3><i class="fa-solid fa-hourglass"></i> Centres d'intérêt</h3>
+                <ul>
+                    <li>Développement</li>
+                    <li>Dessin</li>
+                    <li>Musique</li>
+                    <li>Animation et modélisation</li>
+                    <li>Astronomie</li>
+                    <li>Jeu vidéo</li>
                 </ul>
             </div>
         </div>
@@ -152,6 +205,8 @@
     <section class="project-section">
     <h3 class="project-container-title"><i class="fa-solid fa-code"></i> Projets informatiques</h3>
     <div class="project-container">
+
+        <!-- Carte FROSTHORN -->
         <div class="project-card">
             <img src="images/projet-frosthorn.png" alt="FrostHorn">
             <div class="tag-list">
@@ -167,6 +222,8 @@
             <p>Un jeu d'aventure post-apocalyptique en 2D au cœur d'une histoire dans laquelle le joueur doit explorer et innover pour obtenir la Corne d'Abondance. Créé avec le moteur de jeu Godot.</p>
             <a onclick="openModal('modal-projet1')">Voir plus</a>
         </div>
+
+        <!-- Carte YOUTUBE LOCAL DOWNLOADER -->
         <div class="project-card">
             <img src="images/projet-yld.png" alt="YouTube Local Downloader">
             <div class="tag-list">
@@ -182,12 +239,64 @@
             <p>Une application permettant de télécharger des contenus sur YouTube en local, et son site intranet.</p>
             <a onclick="openModal('modal-projet2')">Voir plus</a>
         </div>
-        <!-- Ajoute d'autres blocs similaires -->
+        
+        <!-- Carte BOT DISCORD -->
+        <div class="project-card">
+            <img src="images/projet-wisebot-miniature.png" alt="Bot Discord">
+            
+            <div class="tag-list">
+                <span class="tag blue-tag">Projet personnel</span>
+                <span class="tag blue-tag">Application</span>
+                <span class="tag purple-tag">SQLite (Bases de données)</span>
+                <span class="tag purple-tag">Python</span>
+                <span class="tag purple-tag">Commandes asynchrones</span>
+                <span class="tag purple-tag">API</span>
+            </div>
+            <h3>WiseBot : Bot Discord de divertissement</h3>
+            <p>Un "bot" de divertissement interactif pour Discord, disposant d'une panoplie de commandes amusantes et de mini jeux.</p>
+            <a onclick="openModal('modal-projet3')">Voir plus</a>
+        </div>
+
+        <!-- Carte S102 -->
+        <div class="project-card">
+            <img src="images/projet-s102.gif" alt="Jeu en C++">
+            
+            <div class="tag-list">
+                <span class="tag orange-tag">Projet scolaire</span>
+                <span class="tag blue-tag">Qualité de développement</span>
+                <span class="tag purple-tag">C++</span>
+            </div>
+            <h3>Mini jeu vidéo en C++</h3>
+            <p>Un mini jeu vidéo en top-down codé en C++ dans le cadre d'un projet scolaire.</p>
+            <a onclick="openModal('modal-projet4')">Voir plus</a>
+        </div>
+
     </div>
+
+    <h3 class="project-container-title"><i class="fa-solid fa-code"></i> Autres projets</h3>
+    <div class="project-container">
+        <!-- Carte BEST-OF -->
+        <div class="project-card">
+            <img src="images/best-of.png" alt="Le Best-of">
+            <div class="tag-list">
+                <span class="tag blue-tag">Projet personnel</span>
+                <span class="tag blue-tag">Original</span>
+                <span class="tag blue-tag">Artistique</span>
+            </div>
+            <h3>Le Best-of</h3>
+            <p>Un défi pour le moins original que je me fixe chaque année, qui consiste à créer une vidéo de plus d'une heure compilant les moments mémorables enregistrés avec mon entourage.</p>
+            <a onclick="openModal('modal-projet5')">Voir plus</a>
+        </div>
+
+    </div>
+
+
     </section>
 
 
     <!-- Modals pour les projets -->
+    
+    <!-- Projet FROSTHORN -->
     <div class="modal" id="modal-projet1">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-projet1')">&times;</span>
@@ -210,12 +319,14 @@
             <img src="images/projet-frosthorn-logo-corne.png" alt="FrostHorn" class="project-image" style="width: 200px;">
             <img src="images/projet-frosthorn-reunion.png" alt="FrostHorn" class="project-image" style="width: 300px;">
             <img src="images/projet-frosthorn-textures.png" alt="FrostHorn" class="project-image" style="width: 300px;">
+            <img src="images/logo-unight.png" alt="FrostHorn" class="project-image" style="width: 100px;">
             <h4><i class="fa-solid fa-link"></i> Liens annexes</h4>
             <p class="link"><a href="https://github.com/U-Night/FrostHorn" target=”_blank”><i class="fa-brands fa-github"></i> GitHub du projet</a></p>
             <p class="link"><a href="https://github.com/U-Night/wiki" target=”_blank”><i class="fa-solid fa-book"></i> GitHub de la documentation</a></p>
         </div>
     </div>
 
+    <!-- Projet YOUTUBE LOCAL DOWNLOADER -->
     <div class="modal" id="modal-projet2">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-projet2')">&times;</span>
@@ -244,11 +355,71 @@
         </div>
     </div>
 
+    <!-- Projet BOT DISCORD -->
+    <div class="modal" id="modal-projet3">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-projet3')">&times;</span>
+            <h2>WiseBot : Bot Discord de divertissement</h2>
+            <h3>Un "bot" de divertissement interactif pour Discord, disposant d'une panoplie de commandes amusantes et de mini jeux.</h3>
+            <img class="banner" src="images/projet-wisebot-banniere.png" alt="FrostHorn" class="project-image">
+            <div class="tag-list">
+                <span class="tag blue-tag">Projet personnel</span>
+                <span class="tag blue-tag">Application</span>
+                <span class="tag purple-tag">SQLite (Bases de données)</span>
+                <span class="tag purple-tag">Python</span>
+                <span class="tag purple-tag">Commandes asynchrones</span>
+                <span class="tag purple-tag">API</span>
+            </div>
+            <p>• WiseBot est un bot pour Discord : une application interactive que les utilisateurs peuvent utiliser grâce à des <a href="https://discord-france.fr/commandes-slash"><i>commandes slash</i></a>.</p>
+            <p>• J'ai conçu ce projet dans l'optique de déployer un bot axé sur le divertissement. Ainsi, les membres d'un serveur peuvent l'utiliser pour faire des blagues, jouer de la musique, attribuer des rôles, créer des QCM, des sondages, générer un contenu aléatoire, créer des événements... et bien plus !</p>
+            <p>• Le bot est conçu en Python, et utilise la librairie <a href="https://discordpy.readthedocs.io/en/stable/" target="_blank">Discord.py</a> pour interagir avec l'API de Discord. Il utilise également SQLite pour stocker les données des utilisateurs.</p>
+            <p>• Il est également conçu pour être asynchrone, ce qui permet de gérer plusieurs commandes en même temps sans ralentir le serveur Discord.</p>
+            <img src="images/projet-wisebot-countdown.png" alt="FrostHorn" class="project-image" style="width: 300px;">
+            <img src="images/projet-wisebot-sql.png" alt="FrostHorn" class="project-image" style="width: 300px;">
+            <img src="images/projet-wisebot-morse.png" alt="FrostHorn" class="project-image" style="width: 300px;">
+        </div>
+    </div>
+
+    <!-- Projet S102 -->
+    <div class="modal" id="modal-projet4">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-projet4')">&times;</span>
+            <h2>Mini jeu vidéo en C++</h2>
+            <h3>Un mini jeu vidéo en top-down codé en C++ dans le cadre d'un projet scolaire.</h3>
+            <img class="banner" src="images/projet-s102-banniere.png" alt="FrostHorn" class="project-image">
+            <div class="tag-list">
+                <span class="tag orange-tag">Projet scolaire</span>
+                <span class="tag blue-tag">Qualité de développement</span>
+                <span class="tag purple-tag">C++</span>
+            </div>
+            <p>• Au premier semestre du BUT informatique que j'entreprends, j'ai été amené à concevoir en quelques semaines un mini jeu vidéo avec le langage C++, à l'aide de Code::Blocks.</p>
+            <p>• Ce projet, réalisé en binôme, a été l'occasion de découvrir les bases du langage C++, ainsi que les bonnes pratiques de développement. Cela inclut la refactorisation du code, l'apprentissage du développement orienté-objet et la gestion des événements dans un jeu.</p>
+            <p>• Le jeu est un mini jeu de type "top-down" dans lequel le joueur doit collecter des objets tout en évitant les ennemis. Le joueur peut se déplacer dans un environnement en 2D, et doit collecter toutes les pièces présentes sur le terrain pour gagner.</p>
+        </div>
+    </div>
+
+    <!-- Projet BEST-OF -->
+    <div class="modal" id="modal-projet5">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-projet5')">&times;</span>
+            <h2>Le Best-of</h2>
+            <h3>Un défi pour le moins original que je me fixe chaque année, qui consiste à créer une vidéo de plus d'une heure compilant les moments mémorables enregistrés avec mon entourage.</h3>
+            <img class="banner" src="images/best-of-montage.png" alt="FrostHorn" class="project-image">
+            <div class="tag-list">
+                <span class="tag blue-tag">Projet personnel</span>
+                <span class="tag blue-tag">Original</span>
+                <span class="tag blue-tag">Artistique</span>
+            </div>
+            <p>• Depuis trois ans, je prépare annuellement une grande vidéo "best-of", compilant tous les instants enregistrés avec mes amis dans une vidéo montée et embellie par mes propres dessins, musiques, animations et histoires !</p>
+            <p>• C'est à la fois un jeu amusant mais également une façon pour moi et mes proches de créer et conserver des souvenirs sur des instants qui nous ont marqués. Ainsi, j'enregistre régulièrement des clips, puis je les ajoute à la vidéo ! Et à chaque fin d'année, cette dernière est publiée et permet à chacun de se remémorer les moments forts des 365 jours passés !</p>
+        </div>
+    </div>
+
 
     <section id="contact" class="contact-section">
         <div class="container right-container">
             <section class="title-block">
-                <h2>Rentrons en contact</h2>
+                <h2>Gardons contact</h2>
                 <h3></h3>
                 <p>Vous souhaitez me contacter ? Voici mes informations !</p>
             </section>
