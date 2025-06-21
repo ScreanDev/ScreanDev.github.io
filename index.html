@@ -12,6 +12,10 @@
 
 <body>
     <div class="header">
+        <div class="burger" onclick="document.querySelector('.inner-header').classList.toggle('active')">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <div class="inner-header">
             <h2><a href="#degree" class="nav-link"><i class="fa-solid fa-user-graduate"></i> Formations</a></h2>
             <h2><a href="#skills" class="nav-link"><i class="fa-solid fa-star"></i> Compétences</a></h2>
@@ -19,6 +23,7 @@
             <h2><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contactez-moi</a></h2>
         </div>
     </div>
+
     <section class="main-big-title-section">
         <div class="main-big-title-section-inner">
             <h1 id="main-big-title">Bonjour. Je m'appelle Lucas,</br>et vous voici sur mon portfolio !</h1>
