@@ -667,6 +667,12 @@ body.modal-open {
   font-family: Poppins;
 }
 
+.content-block li {
+  margin-top: 0.5em;
+  color: #333;
+  font-family: Poppins;
+}
+
 
 .content-block img {
     width: 100%;
