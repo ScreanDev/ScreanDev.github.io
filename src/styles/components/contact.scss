@@ -1,0 +1,56 @@
+
+.contact-section {
+    padding: 4em;
+    text-align: center;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.contact-block {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    max-width: 500px;
+    transition: 0.3s ease;
+
+    i {
+        font-size: 1.5em;
+        color: #2980b9;
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+        color: #0e81b6;
+        font-family: Outfit;
+    }
+
+    p {
+        font-family: Poppins;
+        color: #333;
+        font-weight: 500;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2980b9;
+        font-weight: 600;
+    }
+
+}
+
+.contact-block:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+    cursor: pointer;
+}

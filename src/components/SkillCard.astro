@@ -1,0 +1,18 @@
+---
+// src/components/SkillCard.astro
+
+interface Props {
+  skill: string;
+  skillIcon: string;
+  list: string[];
+}
+
+const { skill, skillIcon, list } = Astro.props;
+---
+
+<div class="skills-block">
+    <h3><i class={`fa-solid ${skillIcon}`}></i> {skill}</h3>
+    <ul>
+        {list.map((item) => <li>{item}</li>)}
+    </ul>
+</div>

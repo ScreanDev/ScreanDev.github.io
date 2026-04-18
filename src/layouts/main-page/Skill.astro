@@ -1,0 +1,65 @@
+---
+import SkillCard from "../../components/SkillCard.astro"
+import '../../styles/components/skill.scss';
+---
+
+<div id="skills" class="skills-section">
+    <section class="title-block">
+        <h2>Mes compétences</h2>
+        <h3></h3>
+    </section>
+
+    <div class="skills-container">
+        <SkillCard 
+            skill="Hard Skills" 
+            skillIcon="fa-power-off" 
+            list={[
+                "Python, C++, Java, Javascript",
+                "HTML, CSS, JavaScript",
+                "GitHub, GitLab",
+                "SQL, Systèmes de gestion de bases de données",
+                "Outils de développement : VS Code, GitBash, Code::Blocks, Eclipse",
+                "API, Frameworks : Godot, Unreal Engine",
+                "Pack Office"
+            ]}
+        />
+
+        <SkillCard 
+            skill="Soft Skills" 
+            skillIcon="fa-certificate" 
+            list={[
+                "Investissement",
+                "Créativité",
+                "Polyvalence",
+                "Réactivité",
+                "À l'écoute",
+                "Esprit critique",
+                "Persévérance",
+                "Coopération, travail en équipe"
+            ]}
+        />
+
+        <SkillCard 
+            skill="Langues" 
+            skillIcon="fa-language" 
+            list={[
+                "Français : Langue maternelle",
+                "Anglais : Niveau C1",
+                "Espagnol : Niveau B1"
+            ]}
+        />
+        
+        <SkillCard 
+            skill="Centres d'intérêt"
+            skillIcon="fa-hourglass" 
+            list={[
+                "Développement",
+                "Jeu vidéo",
+                "Dessin",
+                "Musique",
+                "Animation et modélisation",
+                "Astronomie"
+            ]}
+        />
+    </div>
+</div>

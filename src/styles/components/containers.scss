@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2em;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+
+.section-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: #0000003f 0px 0px 10px;
+    border-radius: 10px;
+    padding: 2em;
+
+
+    h2 {
+        font-size: 2em;
+        color: rgb(14, 39, 182);
+        padding-bottom: 5E-1em;
+        font-family: Lexend;
+    }
+
+    h3 {
+        font-size: 1em;
+        font-family: Outfit;
+        color: rgb(14, 129, 182);
+        padding-bottom: 5E-1em;
+        border-bottom: 2px solid #2980b9;
+    }
+
+    p {
+        font-size: 1em;
+        font-family: Poppins;
+        font-weight: 500;
+        padding-top: 15E-1em;
+        color: rgb(4, 0, 44);
+    }
+}
+
+
+
+.center-container {
+    margin: 0 auto;
+    justify-content: space-evenly;
+    text-align: left;
+
+    .section-block {
+        border-top: 7px solid #2980b9;
+    }
+}
+
+
+
+.left-container {
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-direction: row;
+    text-align: left;
+    gap: 5em;
+
+    .section-block {
+        border-left: 7px solid #2980b9;
+    }
+}
+
+
+
+.right-container {
+    margin-right: 0;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    text-align: right;
+    gap: 5em;
+
+    .section-block {
+        border-right: 7px solid #2980b9;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column !important;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .left-container,
+    .right-container,
+    .center-container {
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 2em;
+    }
+
+    .section-block {
+        width: 100%;
+        padding: 1.5em;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .left-container .section-block,
+    .right-container .section-block,
+    .center-container .section-block {
+        border: none;
+        border-top: 5px solid #2980b9;
+    }
+
+    .right-container section:last-child img {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-container {
+        flex-direction: column !important;
+    }
+}

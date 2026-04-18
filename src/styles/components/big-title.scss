@@ -1,0 +1,49 @@
+.main-big-title-section {
+    width: 100%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+
+#main-big-title {
+    font-size: 3em;
+    font-weight: 400;
+    font-family: DM Serif Text;
+    color: #000000;
+    text-align: center;
+    animation-duration: 1s;
+    animation-name: main-big-title-init;
+}
+
+
+@media screen and (max-width: 768px) {
+  #main-big-title {
+    font-size: 2em;
+    padding: 0 1em;
+  }
+
+  .main-big-title-section {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main-big-title {
+    font-size: 1.5em;
+    line-height: 1.4em;
+  }
+}
+
+
+@keyframes main-big-title-init {
+from {
+    transform:translateY(50px);
+    opacity: 0;
+}
+
+to {
+    opacity: 1;
+    transform:translateY(0px);
+}
+}

@@ -1,0 +1,16 @@
+---
+import '../../styles/components/navbar.scss';
+---
+
+<div class="header">
+    <div class="burger" onclick="document.querySelector('.inner-header').classList.toggle('active')">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="inner-header">
+        <h2><a href="#degree" class="nav-link" style="--i: 1;"><i class="fa-solid fa-user-graduate"></i> Formations</a></h2>
+        <h2><a href="#skills" class="nav-link" style="--i: 2;"><i class="fa-solid fa-star"></i> Compétences</a></h2>
+        <h2><a href="#projects" class="nav-link" style="--i: 3;"><i class="fa-solid fa-folder-open"></i> Mes projets</a></h2>
+        <h2><a href="#contact" class="nav-link" style="--i: 4;"><i class="fa-solid fa-envelope"></i> Contactez-moi</a></h2>
+    </div>
+</div>

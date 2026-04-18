@@ -1,0 +1,36 @@
+---
+// src/components/DegreeCard.astro
+
+interface Props {
+  title: string;
+  subtitle: string;
+  details: string[];
+  skills: string[];
+  img: { src: string };
+  imgAlt: string;
+}
+
+const { title, subtitle, details, skills, img, imgAlt } = Astro.props as Props;
+---
+
+
+
+<div class="timeline-item">
+    <div class="content-block">
+        <img src={img.src} alt={imgAlt}>
+        <div class="timeline-degree-info">
+            <h3>{title}</h3>
+            <p><b>{subtitle}</b></p>
+            <ul>
+                {details.map((detail) => <li>• {detail}</li>)}
+            </ul>
+                        
+            <hr class="center-aligned" style="width: 100%;">
+            <p><b>Compétences développées</b></p>
+            <ul>
+                {skills.map((skill) => <li>• {skill}</li>)}
+            </ul>
+        </div>
+    </div>
+<!-- Dernier bloc sans flèche -->
+</div>

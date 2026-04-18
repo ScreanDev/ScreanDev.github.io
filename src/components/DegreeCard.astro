@@ -1,0 +1,40 @@
+---
+// src/components/DegreeCard.astro
+
+const { degree, education, description, img, imgAlt, endArrow } = Astro.props;
+---
+
+<div class="timeline-item">
+    <div class="content-block">
+        <img src={img} alt={imgAlt}>
+        <div class="timeline-degree-info">
+            <h3 class="timeline-degree-header">{degree}</h3>
+            <p><b>{education}</b></p>
+            <p>{description}</p>
+        </div>
+    </div>
+    {!endArrow && <div class="arrow">&#x2193;</div>}
+</div>
+
+<style lang="scss">
+  .school-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: #fff;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      h3 { margin: 0; color: #333; }
+      .badge-annee { color: #666; font-size: 0.9em; }
+    }
+  }
+</style>

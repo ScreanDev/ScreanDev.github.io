@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/main-page/BaseLayout.astro';
+import Navbar from '../layouts/main-page/Navbar.astro';
+import Contact from '../layouts/main-page/Contact.astro';
+---
+
+<BaseLayout titre="Test - Mon Portfolio">
+  <head>
+    <Navbar />
+  </head>
+
+  <main>
+    <h1>Une deuxième page</h1>
+    <p>Voici une deuxième page pour tester la navigation entre les pages.</p>
+
+    <li>
+        <ul>élément 1</ul>
+        <ul>élément 2</ul>
+        <ul>élément 3</ul>
+        <ul>élément 4</ul>
+        <ul>élément 5</ul>
+        <ul>élément 6</ul>
+        <ul>élément 7</ul>
+        <ul>élément 8</ul>
+        <ul>élément 9</ul>
+    </li>
+  
+    <Contact />
+  </main>
+
+  <footer>
+    <p>© 2026 - Fait avec Astro par Lucas</p>
+  </footer>
+</BaseLayout>
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #bdc7ef;
+  }
+</style>

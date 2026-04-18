@@ -1,0 +1,38 @@
+---
+import '../../styles/components/containers.scss';
+import '../../styles/components/education.scss';
+import EducationCard from '../../components/DegreeCard.astro';
+
+import butInfoImg from '../../assets/universite.jpg';
+import lyceeImg from '../../assets/logo-lycee.png';
+import collegeImg from '../../assets/logo-college.jpg';
+---
+
+<section class="title-block">
+    <h2>Formations et diplômes</h2>
+    <h3></h3>
+</section>
+
+<section class="timeline-section">
+    <div class="timeline">
+
+        <EducationCard 
+            degree="B.U.T. Informatique" 
+            education="IUT d'Orsay – 2024 à aujourd'hui" 
+            description="Parcours A : développement d'applications"
+            img={butInfoImg.src}
+            imgAlt="Logo BUT Informatique"
+            endArrow={false}
+        />
+
+        <EducationCard 
+            degree="Baccalauréat Général : Mention Bien" 
+            education="Lycée Marguerite Yourcenar – 2021 à 2024" 
+            description="Spécialités : NSI, Mathématiques, Physique-Chimie"
+            img={lyceeImg.src}
+            imgAlt="Logo Lycée Marguerite Yourcenar"
+            endArrow={true}
+        />
+
+    </div>
+</section>

@@ -1,0 +1,70 @@
+---
+interface Props {
+    title: string;
+    tags: { name: string; class: string }[];
+    description: string;
+    banner: string;
+    modalDesc: string;
+    modalBanner: string;
+}
+
+const { title, tags, description, banner, modalDesc, modalBanner} = Astro.props;
+---
+
+<!-- Card -->
+<div class="project-wrapper">
+    <div class="project-card">
+        <img src={banner} alt="Project banner">
+        <div class="tag-list">
+            {tags.map((tag) => <span class={`tag ${tag.class}`}>{tag.name}</span>)}
+        </div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+
+    <div class="modal">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content">
+            <h2>{title}</h2>
+            <h3>{modalDesc}</h3>
+            <img class="banner" src={modalBanner} alt="Modal banner">
+            <div class="tag-list modal-tags">
+                {tags.map((tag) => <span class={`tag ${tag.class}`}>{tag.name}</span>)}
+            </div>
+            <div class="modal-markdown">
+                <slot/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const wrappers = document.querySelectorAll('.project-wrapper');
+
+    wrappers.forEach(wrapper => {
+        const card: any = wrapper.querySelector('.project-card');
+        const modal: any = wrapper.querySelector('.modal');
+        const modalContent: any = wrapper.querySelector('.modal-content');
+        const closeBtn: any = wrapper.querySelector('.close-btn');
+
+        if (card && modal) {
+            // open modal
+            card.addEventListener("click", () => {
+                modal.classList.add('show');
+                document.body.classList.add('modal-open');
+                modalContent.scrollTop = 0;; // scroll to top when opening modal
+            });
+        }
+
+        if (modal) {
+            modal.addEventListener("click", (event: any) => {
+                // close modal if click outside content
+                if (event.target === modal || event.target === closeBtn) {
+                    modal.classList.remove('show');
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        }
+    });
+</script>
