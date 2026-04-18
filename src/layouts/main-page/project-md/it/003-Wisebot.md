@@ -1,15 +1,19 @@
 ---
-title: "Project card title"
-description: "Project card description"
-banner: "template-asset.png"
-modalDesc: "Project modal description"
-modalBanner: "template-asset.png"
+title: "WiseBot : Bot Discord de divertissement"
+description: "Un \"bot\" de divertissement interactif pour Discord, disposant d'une panoplie de commandes amusantes et de mini jeux."
+banner: "wisebot-banner.png"
+modalDesc: "WiseBot est un bot de divertissement pour Discord, conçu pour offrir une expérience interactive et amusante aux utilisateurs."
+modalBanner: "wisebot-modal-banner.png"
 tags:
-  - name: "Red tag"
-    class: "red-tag"
-  - name: "Blue tag"
+  - name: "Projet personnel"
     class: "blue-tag"
-  - name: "Purple tag"
+  - name: "SQLite (Bases de données)"
+    class: "purple-tag"
+  - name: "Python"
+    class: "purple-tag"
+  - name: "Commandes asynchrones"
+    class: "purple-tag"
+  - name: "API de Discord"
     class: "purple-tag"
 ---
 
@@ -22,6 +26,6 @@ J'ai conçu ce projet dans l'optique de déployer un bot axé sur le divertissem
 Le bot est conçu en Python, et utilise la librairie <a href="https://discordpy.readthedocs.io/en/stable/" target="_blank">Discord.py</a> pour interagir avec l'API de Discord. Il utilise également SQLite pour stocker les données des utilisateurs.
 Il est également conçu pour être asynchrone, ce qui permet de gérer plusieurs commandes en même temps sans ralentir le serveur Discord.
 
-![Commandes de divertissement](../../../assets/projet-wisebot-countdown.png)
-![Stockage de données](../../../assets/projet-wisebot-sql.png)
-![Commandes de traduction en morse](../../../assets/projet-wisebot-morse.png)
+![Commandes de divertissement](../../../../assets/wisebot-project-countdown.png)
+![Stockage de données](../../../../assets/wisebot-project-sql.png)
+![Commandes de traduction en morse](../../../../assets/wisebot-project-morse.png)

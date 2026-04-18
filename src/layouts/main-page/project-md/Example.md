@@ -1,4 +1,4 @@
----
+\---
 title: "Project card title"
 description: "Project card description"
 banner: "template-asset.png"

@@ -5,7 +5,23 @@ import ProjectCard from '../../components/ProjectCard.astro';
 const images = import.meta.glob<{ default: { src: string } }>('../../assets/*.{png,jpg,jpeg,gif}', { eager: true });
 
 console.log(Object.keys(images));
-const projectMdFiles = await Astro.glob('./project-md/*.md');
+const itProjectMdFiles = await Astro.glob('./project-md/it/*.md');
+const otherProjectMdFiles = await Astro.glob('./project-md/other/*.md');
+
+const projectSections = [
+    {
+        title: "Projets informatiques",
+        icon: "fa-code",
+        files: itProjectMdFiles
+    },
+    {
+        title: "Autres projets",
+        icon: "fa-palette",
+        files: otherProjectMdFiles
+    }
+];
+
+
 ---
     
     <hr class="animated-hr center-aligned" style="width: 90%;">
@@ -19,41 +35,42 @@ const projectMdFiles = await Astro.glob('./project-md/*.md');
     </div>
 
 <section class="project-section">
-    <h3 class="project-container-title"><i class="fa-solid fa-code"></i> Projets informatiques</h3>
-    <div class="project-container">
+    {projectSections.map((section) => (
+        <> <h3 class="project-container-title">
+                <i class={`fa-solid ${section.icon}`}></i> {section.title}
+            </h3>
+            
+            <div class="project-container">
+                {section.files.map((projet: any) => {
+                    const bannerPath = `../../assets/${projet.frontmatter.banner}`;
+                    const modalBannerPath = `../../assets/${projet.frontmatter.modalBanner}`;
 
-        {projectMdFiles.map((projet) => {
-            const bannerPath = `../../assets/${projet.frontmatter.banner}`;
-            const modalBannerPath = `../../assets/${projet.frontmatter.modalBanner}`;
+                    const bannerModule = images[bannerPath];
+                    const modalBannerModule = images[modalBannerPath];
 
-            const bannerModule = images[bannerPath];
-            const modalBannerModule = images[modalBannerPath];
+                    if (!bannerModule || !modalBannerModule) {
+                        console.log(`\n🚨 UNABLE TO CREATE CARD FOR PROJECT: ${projet.frontmatter.title}`);
+                        if (!bannerModule) console.log(`Could not find asset: ${bannerPath}`);
+                        if (!modalBannerModule) console.log(`Could not find asset: ${modalBannerPath}`);
+                        return null;
+                    }
 
-            // Cards with invalid banner paths will be skipped, and a warning will be logged to the console
-            if (!bannerModule || !modalBannerModule) {
-                console.log(`\n🚨 UNABLE TO CREATE CARD FOR PROJECT: ${projet.frontmatter.title}`);
-                if (!bannerModule) {
-                    console.log(`Could not find asset for banner path: ${bannerPath}`);
-                }
-                if (!modalBannerModule) {
-                    console.log(`Could not find asset for modal banner path: ${modalBannerPath}`);
-                }
-                return null;
-            }
+                    return (
+                        <ProjectCard
+                            title={projet.frontmatter.title}
+                            tags={projet.frontmatter.tags}
+                            description={projet.frontmatter.description}
+                            banner={bannerModule.default.src}
+                            modalDesc={projet.frontmatter.modalDesc}
+                            modalBanner={modalBannerModule.default.src}
+                        >
+                            <projet.Content />
+                        </ProjectCard>
+                    );
+                })}
+            </div>
 
-            return (
-                <ProjectCard
-                    title={projet.frontmatter.title}
-                    tags={projet.frontmatter.tags}
-                    description={projet.frontmatter.description}
-                    banner={bannerModule.default.src}
-                    modalDesc={projet.frontmatter.modalDesc}
-                    modalBanner={modalBannerModule.default.src}
-                >
-                    <projet.Content />
-                </ProjectCard>
-            );
-        })}
-
+        </>
+    ))}
     </div>
 </section>
