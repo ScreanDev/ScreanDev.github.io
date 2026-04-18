@@ -2,32 +2,10 @@
 import '../../styles/components/project.scss';
 import ProjectCard from '../../components/ProjectCard.astro';
 
-const images = import.meta.glob<{ default: string }>('../../assets/*.{png,jpg,jpeg,gif}', { eager: true });
+const images = import.meta.glob<{ default: { src: string } }>('../../assets/*.{png,jpg,jpeg,gif}', { eager: true });
 
 console.log(Object.keys(images));
 const projectMdFiles = await Astro.glob('./project-md/*.md');
-
-/*import {Content as FrostHornMd} from './project-md/FrostHorn.md';
-import {Content as YldMd} from './project-md/YLD.md';
-import {Content as WisebotMd} from './project-md/Wisebot.md';
-
-import frosthornImg from '../../assets/projet-frosthorn.png';
-import yldImg from '../../assets/projet-yld.png';
-import wisebotImg from '../../assets/projet-wisebot-miniature.png';
-import s102Img from '../../assets/projet-s102.gif';
-import codeBreakersImg from '../../assets/projet-code-breakers.png';
-import transverseImg from '../../assets/projet-transverse.png';
-import bestOfImg from '../../assets/best-of.png';
-import musicImg from '../../assets/template-asset.png';
-
-import yldBanner from '../../assets/projet-yld-banniere.png'
-import wisebotBanner from '../../assets/projet-wisebot-banniere.png';
-import s102Banner from '../../assets/projet-s102-banniere.png';
-import codeBreakersBanner from '../../assets/projet-code-breakers-banniere.png';
-import transverseBanner from '../../assets/template-asset.png';
-import bestOfBanner from '../../assets/best-of-montage.png';
-import musicBanner from '../../assets/template-asset.png';*/
-
 ---
     
     <hr class="animated-hr center-aligned" style="width: 90%;">
@@ -51,16 +29,18 @@ import musicBanner from '../../assets/template-asset.png';*/
             const bannerModule = images[bannerPath];
             const modalBannerModule = images[modalBannerPath];
 
-            // On vérifie que les modules ont bien été trouvés AVANT de créer la carte.
+            // Cards with invalid banner paths will be skipped, and a warning will be logged to the console
             if (!bannerModule || !modalBannerModule) {
-                console.log(`\n🚨 ALERTE SUR LE PROJET : ${projet.frontmatter.title}`);
-                console.log(`On a cherché ce chemin : ${bannerPath}`); 
-                console.log(`Est-ce qu'il existe dans nos assets ? -> NON`);
+                console.log(`\n🚨 UNABLE TO CREATE CARD FOR PROJECT: ${projet.frontmatter.title}`);
+                if (!bannerModule) {
+                    console.log(`Could not find asset for banner path: ${bannerPath}`);
+                }
+                if (!modalBannerModule) {
+                    console.log(`Could not find asset for modal banner path: ${modalBannerPath}`);
+                }
                 return null;
             }
 
-            // La carte n'est retournée QUE si JavaScript a pu calculer toutes ses props.
-            // S'il y a un plantage, il aura lieu après les console.log mais avant le rendu.
             return (
                 <ProjectCard
                     title={projet.frontmatter.title}
@@ -75,7 +55,5 @@ import musicBanner from '../../assets/template-asset.png';*/
             );
         })}
 
-
-        
     </div>
 </section>
