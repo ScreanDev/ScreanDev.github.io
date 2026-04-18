@@ -5,12 +5,12 @@ banner: "best-of-project.png"
 modalDesc: "Un défi pour le moins original que je me fixe chaque année, qui consiste à créer une vidéo de plus d'une heure compilant les moments mémorables enregistrés avec mon entourage."
 modalBanner: "best-of-project-modal-banner.png"
 tags:
-  - name: "Red tag"
-    class: "red-tag"
-  - name: "Blue tag"
+  - name: "Projet personnel"
     class: "blue-tag"
-  - name: "Purple tag"
-    class: "purple-tag"
+  - name: "Original"
+    class: "blue-tag"
+  - name: "Artistique"
+    class: "blue-tag"
 ---
 
 Depuis trois ans, je prépare annuellement une grande vidéo "best-of", compilant tous les instants enregistrés avec mes amis dans une vidéo montée et embellie par mes propres dessins, musiques, animations et histoires !
