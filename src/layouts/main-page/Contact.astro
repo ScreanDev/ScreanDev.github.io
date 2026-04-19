@@ -12,29 +12,66 @@ import '../../styles/titles.scss';
         </section>
     </div>
     <div class="contact-container">
-        <div class="contact-block" onclick="copyToClipboard(this)">
+        <div class="contact-block js-copy">
             <i class="fa-solid fa-phone"></i>
             <h3>Téléphone</h3>
             <p>07 64 20 49 26</p>
         </div>
-        <div class="contact-block" onclick="copyToClipboard(this)">
+        <div class="contact-block js-link" data-url="mailto:lucas.pause-chapuis@universite-paris-saclay.fr">
             <i class="fa-solid fa-envelope"></i>
             <h3>Email universitaire</h3>
             <p><a href="mailto:lucas.pause-chapuis@universite-paris-saclay.fr">lucas.pause-chapuis@universite-paris-saclay.fr</a></p>
         </div>
-        <div class="contact-block">
-            <a href="https://github.com/ScreanDev" target="_blank">
+        <div class="contact-block js-link" data-url="https://github.com/ScreanDev">
             <i class="fa-brands fa-github"></i>
             <h3>GitHub</h3>
             <p>Voir mon profil</p>
             </a>
         </div>
-        <div class="contact-block">
-            <a href="https://www.linkedin.com/in/lucas-pausé-chapuis-3a438432b/" target="_blank">
+        <div class="contact-block js-link" data-url="https://www.linkedin.com/in/lucas-pausé-chapuis-3a438432b/">
             <i class="fa-brands fa-linkedin"></i>
             <h3>LinkedIn</h3>
             <p>Voir mon profil</p>
             </a>
         </div>
+
+        <div id="copy-notification">Copié dans le presse-papiers !</div>
     </div>
 </section>
+
+<script>
+    // Copy info to clipboard
+    const copyBlocks = document.querySelectorAll('.js-copy');
+    const popUp = document.getElementById("copy-notification");
+
+    copyBlocks.forEach(block => {
+        block.addEventListener('click', () => {
+            const textToCopy = block.querySelector("p")?.innerText;
+
+            navigator.clipboard.writeText(textToCopy as string)
+                .then(() => {
+                    if (popUp) {
+                        popUp.classList.add("show");
+                        setTimeout(() => {
+                            popUp.classList.remove("show");
+                        }, 2000); // Disappear after 2 seconds
+                    }
+                })
+                .catch(err => {
+                    console.error("Erreur lors de la copie :", err);
+                });
+        });
+    });
+
+    // Open links in new tab
+    const linkBlocks = document.querySelectorAll('.js-link');
+
+    linkBlocks.forEach(block => {
+        block.addEventListener('click', () => {
+            const url = block.getAttribute('data-url');
+            if (url) {
+                window.open(url, '_blank');
+            }
+        });
+    });
+</script>
