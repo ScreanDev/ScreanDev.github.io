@@ -41,6 +41,10 @@ const { title, tags, description, banner, modalDesc, modalBanner} = Astro.props;
 
 <script>
     const wrappers = document.querySelectorAll('.project-wrapper');
+    var soundPlayers = document.querySelectorAll('audio');
+
+    // Reset by loading the page
+    resetAllSounds();
 
     wrappers.forEach(wrapper => {
         const card: any = wrapper.querySelector('.project-card');
@@ -63,8 +67,17 @@ const { title, tags, description, banner, modalDesc, modalBanner} = Astro.props;
                 if (event.target === modal || event.target === closeBtn) {
                     modal.classList.remove('show');
                     document.body.classList.remove('modal-open');
+                    resetAllSounds();
                 }
             });
         }
     });
+
+    function resetAllSounds() {
+        soundPlayers.forEach(player => {
+            player.pause();
+            player.currentTime = 0;
+            player.volume = 0.5;
+        });
+    }
 </script>
