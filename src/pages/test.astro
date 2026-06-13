@@ -2,11 +2,13 @@
 import BaseLayout from '../layouts/main-page/BaseLayout.astro';
 import Navbar from '../layouts/main-page/Navbar.astro';
 import Contact from '../layouts/main-page/Contact.astro';
+
+import fr from '../i18n/fr.json';
 ---
 
 <BaseLayout titre="Test - Mon Portfolio">
   <head>
-    <Navbar />
+    <Navbar t={fr} />
   </head>
 
   <main>

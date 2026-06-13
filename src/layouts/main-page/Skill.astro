@@ -1,64 +1,65 @@
 ---
 import SkillCard from "../../components/SkillCard.astro"
 import '../../styles/components/skill.scss';
+
+const { t } = Astro.props;
 ---
 
 <div id="skills" class="skills-section">
     <section class="title-block">
-        <h2>Mes compétences</h2>
+        <h2>{t.skills.title}</h2>
         <h3></h3>
     </section>
 
     <div class="skills-container">
         <SkillCard 
-            skill="Hard Skills" 
+            skill={t.skills.cardHardSkills.title}
             skillIcon="fa-power-off" 
             list={[
-                "Python, C++, Java, Javascript",
-                "HTML, CSS, JavaScript",
-                "GitHub, GitLab",
-                "SQL, Systèmes de gestion de bases de données",
-                "Outils de développement : VS Code, GitBash, Code::Blocks, Eclipse",
-                "API, Frameworks : Godot, Unreal Engine",
-                "Pack Office"
+                t.skills.cardHardSkills.s1,
+                t.skills.cardHardSkills.s2,
+                t.skills.cardHardSkills.s3,
+                t.skills.cardHardSkills.s4,
+                t.skills.cardHardSkills.s5,
+                t.skills.cardHardSkills.s6,
+                t.skills.cardHardSkills.s7
             ]}
         />
 
         <SkillCard 
-            skill="Soft Skills" 
+            skill={t.skills.cardSoftSkills.title}
             skillIcon="fa-certificate" 
             list={[
-                "Investissement",
-                "Créativité",
-                "Polyvalence",
-                "Réactivité",
-                "À l'écoute",
-                "Esprit critique",
-                "Persévérance",
-                "Coopération, travail en équipe"
+                t.skills.cardSoftSkills.s1,
+                t.skills.cardSoftSkills.s2,
+                t.skills.cardSoftSkills.s3,
+                t.skills.cardSoftSkills.s4,
+                t.skills.cardSoftSkills.s5,
+                t.skills.cardSoftSkills.s6,
+                t.skills.cardSoftSkills.s7
             ]}
         />
 
         <SkillCard 
-            skill="Langues" 
+            skill={t.skills.cardLanguages.title} 
             skillIcon="fa-language" 
             list={[
-                "Français : Langue maternelle",
-                "Anglais : Niveau C1",
-                "Espagnol : Niveau B1"
+                t.skills.cardLanguages.s1,
+                t.skills.cardLanguages.s2,
+                t.skills.cardLanguages.s3
             ]}
         />
         
         <SkillCard 
-            skill="Centres d'intérêt"
+            skill={t.skills.cardHobbies.title}
             skillIcon="fa-hourglass" 
             list={[
-                "Développement",
-                "Jeu vidéo",
-                "Dessin",
-                "Musique",
-                "Animation et modélisation",
-                "Astronomie"
+                t.skills.cardHobbies.s1,
+                t.skills.cardHobbies.s2,
+                t.skills.cardHobbies.s3,
+                t.skills.cardHobbies.s4,
+                t.skills.cardHobbies.s5,
+                t.skills.cardHobbies.s6
             ]}
         />
     </div>

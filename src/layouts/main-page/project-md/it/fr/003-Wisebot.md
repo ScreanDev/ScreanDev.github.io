@@ -26,6 +26,6 @@ J'ai conçu ce projet dans l'optique de déployer un bot axé sur le divertissem
 Le bot est conçu en Python, et utilise la librairie <a href="https://discordpy.readthedocs.io/en/stable/" target="_blank">Discord.py</a> pour interagir avec l'API de Discord. Il utilise également SQLite pour stocker les données des utilisateurs.
 Il est également conçu pour être asynchrone, ce qui permet de gérer plusieurs commandes en même temps sans ralentir le serveur Discord.
 
-![Commandes de divertissement](../../../../assets/wisebot-project-countdown.png)
-![Stockage de données](../../../../assets/wisebot-project-sql.png)
-![Commandes de traduction en morse](../../../../assets/wisebot-project-morse.png)
+![Commandes de divertissement](../../../../../assets/wisebot-project-countdown.png)
+![Stockage de données](../../../../../assets/wisebot-project-sql.png)
+![Commandes de traduction en morse](../../../../../assets/wisebot-project-morse.png)

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/main-page/BaseLayout.astro';
+import Separator from '../../layouts/main-page/Separator.astro';
+import Navbar from '../../layouts/main-page/Navbar.astro';
+import Introducing from '../../layouts/main-page/Introducing.astro';
+import Degree from '../../layouts/main-page/Degree.astro';
+import Experience from '../../layouts/main-page/Experience.astro';
+import Skills from '../../layouts/main-page/Skill.astro';
+import Project from '../../layouts/main-page/Project.astro';
+import Contact from '../../layouts/main-page/Contact.astro';
+import Footer from '../../layouts/main-page/Footer.astro';
+
+import fr from '../../i18n/fr.json';
+import en from '../../i18n/en.json';
+
+export function getStaticPaths() {
+  return [
+    // Generate page /fr/
+    { params: { lang: 'fr' }, props: { t: fr } },
+    // Generate page /en/
+    { params: { lang: 'en' }, props: { t: en } }
+  ];
+}
+
+const { lang } = Astro.params;
+const { t } = Astro.props;
+---
+
+<BaseLayout titre={t.hero.title}>
+  <header>
+    <Navbar t={t} />
+    <button onclick="window.location.href='/test'">{t.hero.testButton}</button>
+  </header>
+
+  <main>
+    <Introducing t={t} />
+
+    <Separator />
+
+    <div id="degree" class="degree-section">
+      <section class="degree-separator">
+        <Degree t={t}/>
+      </section>
+      <section class="degree-separator">
+        <Experience t={t} />
+      </section>
+    </div>
+
+    <Separator />
+    
+    <Skills t={t} />
+
+    <Project t={t} />
+
+    <Separator />
+
+    <Contact t={t} />
+  </main>
+  <Footer t={t} />
+  
+</BaseLayout>

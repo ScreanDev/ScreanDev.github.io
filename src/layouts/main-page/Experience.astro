@@ -5,34 +5,37 @@ import ExperienceCard from '../../components/ExperienceCard.astro';
 
 import razelBecImg from '../../assets/logo-razel-bec.jpg';
 import unightImg from '../../assets/projet-frosthorn.png';
+
+const { t } = Astro.props;
 ---
 
 
 <section class="title-block">
-    <h2>Expériences professionnelles</h2>
+    <h2>{t.experience.title}</h2>
     <h3></h3>
 </section>
 
 <section class="timeline-section">
     <div class="timeline">
         <ExperienceCard 
-            title="Stage d'observation chez Razel-Bec" 
-            subtitle="Razel-Bec | Groupe Fayat – 2021" 
+            t={t}
+            title={t.experience.razelBec.title} 
+            subtitle={t.experience.razelBec.subtitle} 
             details={[
-                "Secteur informatique",
-                "Génie civil",
-                "Laboratoire",
-                "Coordination d'équipe"
+                t.experience.razelBec.details.d1,
+                t.experience.razelBec.details.d2,
+                t.experience.razelBec.details.d3,
+                t.experience.razelBec.details.d4
             ]}
             skills={[
-                "Premier aperçu du monde professionnel",
-                "Observation des métiers de l'informatique et du génie civil",
-                "Cohésion entre les nombreux secteurs d'une entreprise",
-                "Apprentissage de la coordination d'équipe",
-                "Contribution à la configuration ou à la réparation d'appareils informatiques"
+                t.experience.razelBec.skills.s1,
+                t.experience.razelBec.skills.s2,
+                t.experience.razelBec.skills.s3,
+                t.experience.razelBec.skills.s4,
+                t.experience.razelBec.skills.s5
             ]}
             img={razelBecImg}
-            imgAlt="Logo Razel-Bec"
+            imgAlt="Razel-Bec Icon"
         />
     </div>
 </section>

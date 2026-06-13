@@ -6,10 +6,12 @@ import EducationCard from '../../components/DegreeCard.astro';
 import butInfoImg from '../../assets/universite.jpg';
 import lyceeImg from '../../assets/highschool-banner.png';
 import collegeImg from '../../assets/logo-college.jpg';
+
+const { t } = Astro.props;
 ---
 
 <section class="title-block">
-    <h2>Formations et diplômes</h2>
+    <h2>{t.degree.title}</h2>
     <h3></h3>
 </section>
 
@@ -17,20 +19,20 @@ import collegeImg from '../../assets/logo-college.jpg';
     <div class="timeline">
 
         <EducationCard 
-            degree="B.U.T. Informatique" 
-            education="IUT d'Orsay – 2024 à aujourd'hui" 
-            description="Parcours A : développement d'applications"
+            degree={t.degree.bachelorCard.degree} 
+            education={t.degree.bachelorCard.education} 
+            description={t.degree.bachelorCard.description}
             img={butInfoImg.src}
-            imgAlt="Logo BUT Informatique"
+            imgAlt="Orsay University Institute of Technology picture"
             endArrow={false}
         />
 
         <EducationCard 
-            degree="Baccalauréat Général : Mention Bien" 
-            education="Lycée Marguerite Yourcenar – 2021 à 2024" 
-            description="Spécialités : NSI, Mathématiques, Physique-Chimie"
+            degree={t.degree.highschoolCard.degree} 
+            education={t.degree.highschoolCard.education} 
+            description={t.degree.highschoolCard.description}
             img={lyceeImg.src}
-            imgAlt="Logo Lycée Marguerite Yourcenar"
+            imgAlt="Marguerite Yourcenar high school picture"
             endArrow={true}
         />
 

@@ -3,34 +3,36 @@ import '../../styles/components/big-title.scss';
 import '../../styles/components/containers.scss';
 
 import scratchFrame from '../../assets/scratch-frame.png';
+
+const { t } = Astro.props;
 ---
 
 <section class="main-big-title-section">
     <div class="main-big-title-section-inner">
-        <h1 id="main-big-title">Bonjour. Je m'appelle Lucas,</br>et vous voici sur mon portfolio !</h1>
+        <h1 id="main-big-title" set:html={t.introducing.mainBigTitle}></h1>
     </div>
 </section>
 
 <div class="container center-container">
     <section class="section-block" style="width: 70%;">
-        <h2>Ne grillons pas les étapes...</h2>
-        <h3>et permettez-moi tout d'abord de me présenter.</h3>
-        <p>Je m'appelle Lucas Pausé-Chapuis, j'ai 19 ans et je suis étudiant en seconde année de B.U.T. Informatique à l'<a href="https://www.iut-orsay.universite-paris-saclay.fr" target=”_blank”>I.U.T. d'Orsay</a>. J'habite en Essonne.</p>
-        <p><i class="fa-solid fa-desktop"></i> Passionné par l'informatique depuis mes onze ans, j'ai toujours été fasciné par la manière dont les technologies peuvent transformer notre quotidien.</p>
-        <p><i class="fa-solid fa-pencil"></i> Avide de créativité et d'expérimentation, j'ai conçu de nombreux projets pour me perfectionner dans ce domaine.</p>
-        <p><i class="fa-solid fa-circle-question"></i> Aujourd'hui, je suis à la recherche d'un stage d'une durée de trois mois dans le domaine du développement.</p>
+        <h2>{t.introducing.contentBlockHeader}</h2>
+        <h3>{t.introducing.contentBlockSubheader}</h3>
+        <p set:html={t.introducing.contentBlockParagraph1}></p>
+        <p set:html={t.introducing.contentBlockParagraph2}></p>
+        <p set:html={t.introducing.contentBlockParagraph3}></p>
+        <p set:html={t.introducing.contentBlockParagraph4}></p>
     </section>
 </div>
 
 <div class="container right-container">
     <section class="section-block">
-        <h2>Comment cela a commencé ?</h2>
+        <h2>{t.introducing.scratchFrameHeader}</h2>
         <h3></h3>
-        <p>Il y a de nombreuses années, quand j'étais plus jeune, je découvrais <a href="https://scratch.mit.edu">Scratch</a>, un logiciel / site web conçu pour créer ses propres jeux !</p>
-        <p>Très rapidement, alors que j'étais déjà curieux de comprendre le fonctionnement des programmes informatiques, j'ai pris goût à l'algorithmique. Aujourd'hui, je souhaite faire de cette passion mon futur métier.</p>
+        <p set:html={t.introducing.scratchFrameParagraph1}></p>
+        <p set:html={t.introducing.scratchFrameParagraph2}></p>
     </section>
 
     <section>
-        <img src={scratchFrame.src} alt="Image Scratch" width="600">
+        <img src={scratchFrame.src} alt="Scratch Image" width="600">
     </section>
 </div>

@@ -1,0 +1,161 @@
+{
+  "lang": "en",
+
+  "utils": {
+    "copyToClipboard": "Copied to clipboard!"
+  },
+
+  "nav": {
+    "degree": "<a href='#degree' class='nav-link' style('--i: 1;'><i class='fa-solid fa-user-graduate'></i> Degree</a>",
+    "skills": "<a href='#skills' class='nav-link' style('--i: 2;'><i class='fa-solid fa-star'></i> Skills</a>"
+  },
+
+  "hero": {
+    "projects": "<a href='#projects' class='nav-link' style('--i: 3;'><i class='fa-solid fa-folder-open'></i> My Projects</a>",
+    "contact": "<a href='#contact' class='nav-link' style('--i: 4;'><i class='fa-solid fa-envelope'></i> Contact Me</a>",
+    "title": "Pausé-Chapuis Lucas | Portfolio",
+    "testButton": "Go to test page"
+  },
+
+  "introducing": {
+    "mainBigTitle": "Hello. My name is Lucas,\nand here you are on my portfolio!",
+    "contentBlockHeader": "Let's not rush the steps...",
+    "contentBlockSubheader": "and let me introduce myself first.",
+    "contentBlockParagraph1": "My name is Lucas Pausé-Chapuis, I'm a 19 year-old french student in a Computer science bachelor at the <a href='https://www.iut-orsay.universite-paris-saclay.fr' target='_blank'>Orsay University Institute of Technology</a>. I live in the department of Essonne, France.",
+    "contentBlockParagraph2": "<i class='fa-solid fa-desktop'></i> I’ve been passionate about computers since I was eleven, and I’ve always been fascinated by the way technology can transform our daily lives.",
+    "contentBlockParagraph3": "<i class='fa-solid fa-pencil'></i> Eager to explore creativity and experimentation, I have developed numerous projects to hone my skills in this field.",
+    "contentBlockParagraph4": "<i class='fa-solid fa-circle-question'></i> I am currently looking for a three-month internship in the field of software development.",
+
+    "scratchFrameHeader": "How it all started?",
+    "scratchFrameParagraph1": "Many years ago, when I was younger, I discovered <a href='https://scratch.mit.edu'>Scratch</a>, a platform designed for creating your own games!",
+    "scratchFrameParagraph2": "Since I was already curious about how computer programs work, I quickly developed a passion for this stuff. Today, I want to turn this passion into my future career."
+  },
+
+  "degree": {
+    "title": "Education and degrees",
+
+    "bachelorCard": {
+      "degree": "Bachelor's degree in computer science",
+      "education": "Orsay University Institute of Technology - 2024 to present",
+      "description": "Application Development Track"
+    },
+
+    "highschoolCard": {
+      "degree": "French Baccalauréat - High School Diploma, with high honors",
+      "education": "Marguerite Yourcenar High School – 2021 to 2024",
+      "description": "Mathematics and Computer Science specializations"
+    }
+  },
+
+  "experience": {
+    "title": "Experiences",
+
+    "skillsDeveloped": "Skills developed",
+
+    "razelBec": {
+      "title": "Observation internship at Razel-Bec",
+      "subtitle": "Razel-Bec | Fayat Group subsidiary – 2021",
+      "details": {
+        "d1": "IT sector",
+        "d2": "Civil Engineering",
+        "d3": "Laboratory",
+        "d4": "Team Coordination"
+      },
+
+      "skills": {
+        "s1": "First glimpse of the professional world",
+        "s2": "Observation of IT and civil engineering jobs",
+        "s3": "Cohesion between the many sectors of a company",
+        "s4": "Learning team coordination",
+        "s5": "Contribution to the configuration or repair of computer equipment"
+      }
+    }
+  },
+
+  "skills": {
+    "title": "Skills",
+
+    "cardHardSkills": {
+      "title": "Hard Skills",
+      "s1": "Python, C++, Java, Javascript",
+      "s2": "HTML, CSS, JavaScript",
+      "s3": "GitHub, GitLab",
+      "s4": "SQL, Database Management Systems",
+      "s5": "Development Tools: VS Code, GitBash, Code::Blocks, Eclipse",
+      "s6": "API, Frameworks: Godot, Unity",
+      "s7": "Office Suite"
+    },
+
+    "cardSoftSkills": {
+      "title": "Soft Skills",
+      "s1": "Commitment",
+      "s2": "Creativity",
+      "s3": "Curiosity",
+      "s4": "Versatility",
+      "s5": "Listening",
+      "s6": "Critical Thinking",
+      "s7": "Cooperation, teamwork"
+    },
+
+    "cardLanguages": {
+      "title": "Languages",
+      "s1": "French: Native language",
+      "s2": "English: C1 Level",
+      "s3": "Spanish: B1 Level"
+    },
+
+    "cardHobbies": {
+      "title": "Hobbies",
+      "s1": "Computer Science and new technologies",
+      "s2": "Video Games",
+      "s3": "Drawing",
+      "s4": "Music",
+      "s5": "Animation and Modeling",
+      "s6": "Astronomy"
+    }
+  },
+
+  "projects": {
+    "title": "My projects",
+    "subtitle": "Here you will find some of the projects I have worked on.",
+
+    "itProjects": {
+      "title": "IT projects"
+    },
+
+    "otherProjects": {
+      "title": "Other projects"
+    }
+  },
+
+  "contact": {
+    "header": "Let's stay in touch",
+    "subtitle": "You want to contact me? Here you can find my information!",
+
+    "info": {
+      "phone": {
+        "title": "Phone number",
+        "value": "+33 7 64 20 49 26"
+      },
+
+      "email": {
+        "title": "University email",
+        "value": "lucas.pause-chapuis@universite-paris-saclay.fr"
+      },
+
+      "github": {
+        "title": "GitHub",
+        "value": "See my profile"
+      },
+
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "See my profile"
+      }
+    }
+  },
+
+  "footer": {
+    "copyright": "Built with <a href='https://astro.build' target='_blank'>Astro</a>"
+  }
+}

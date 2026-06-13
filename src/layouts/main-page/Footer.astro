@@ -1,7 +1,9 @@
 ---
 import '../../styles/components/footer.scss';
+
+const { t } = Astro.props;
 ---
 
 <footer>
-    <p>Compilé avec <a href="https://astro.build" target="_blank">Astro</a></p>
+    <p set:html={t.footer.copyright}></p>
 </footer>

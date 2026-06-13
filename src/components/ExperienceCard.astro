@@ -2,6 +2,7 @@
 // src/components/DegreeCard.astro
 
 interface Props {
+  t: any;
   title: string;
   subtitle: string;
   details: string[];
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const { title, subtitle, details, skills, img, imgAlt } = Astro.props as Props;
+const { t } = Astro.props;
 ---
 
 
@@ -26,7 +28,7 @@ const { title, subtitle, details, skills, img, imgAlt } = Astro.props as Props;
             </ul>
                         
             <hr class="center-aligned" style="width: 100%;">
-            <p><b>Compétences développées</b></p>
+            <p><b>{t.experience.skillsDeveloped}</b></p>
             <ul>
                 {skills.map((skill) => <li>• {skill}</li>)}
             </ul>

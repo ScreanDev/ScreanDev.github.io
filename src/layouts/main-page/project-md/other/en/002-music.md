@@ -48,6 +48,6 @@ Bien que je ne sois pas un expert dans la matière, on dit de moi que j'ai l'ore
   Your browser does not support the audio tag.
 </audio>
 
-![Capture de FL Studio, projet Nevada Reboot](../../../../assets/music-project-fl.png)
+![Capture de FL Studio, projet Nevada Reboot](../../../../../assets/music-project-fl.png)
 
 [^1]: *MAO = Musique assistée par ordinateur*

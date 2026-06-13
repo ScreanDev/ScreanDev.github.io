@@ -1,41 +1,43 @@
 ---
 import '../../styles/components/contact.scss';
 import '../../styles/titles.scss';
+
+const { t } = Astro.props;
 ---
 
 <section id="contact" class="contact-section">
     <div class="container right-container">
         <section class="title-block">
-            <h2>Gardons contact</h2>
+            <h2>{t.contact.header}</h2>
             <h3></h3>
-        <p>Vous souhaitez me contacter ? Voici mes informations !</p>
+            <p>{t.contact.subtitle}</p>
         </section>
     </div>
     <div class="contact-container">
         <div class="contact-block js-copy">
             <i class="fa-solid fa-phone"></i>
-            <h3>Téléphone</h3>
-            <p>07 64 20 49 26</p>
+            <h3>{t.contact.info.phone.title}</h3>
+            <p>{t.contact.info.phone.value}</p>
         </div>
         <div class="contact-block js-link" data-url="mailto:lucas.pause-chapuis@universite-paris-saclay.fr">
             <i class="fa-solid fa-envelope"></i>
-            <h3>Email universitaire</h3>
-            <p><a href="mailto:lucas.pause-chapuis@universite-paris-saclay.fr">lucas.pause-chapuis@universite-paris-saclay.fr</a></p>
+            <h3>{t.contact.info.email.title}</h3>
+            <p><a href="mailto:lucas.pause-chapuis@universite-paris-saclay.fr">{t.contact.info.email.value}</a></p>
         </div>
         <div class="contact-block js-link" data-url="https://github.com/ScreanDev">
             <i class="fa-brands fa-github"></i>
-            <h3>GitHub</h3>
-            <p>Voir mon profil</p>
+            <h3>{t.contact.info.github.title}</h3>
+            <p>{t.contact.info.github.value}</p>
             </a>
         </div>
         <div class="contact-block js-link" data-url="https://www.linkedin.com/in/lucas-pausé-chapuis-3a438432b/">
             <i class="fa-brands fa-linkedin"></i>
-            <h3>LinkedIn</h3>
-            <p>Voir mon profil</p>
+            <h3>{t.contact.info.linkedin.title}</h3>
+            <p>{t.contact.info.linkedin.value}</p>
             </a>
         </div>
 
-        <div id="copy-notification">Copié dans le presse-papiers !</div>
+        <div id="copy-notification">{t.utils.copyToClipboard}</div>
     </div>
 </section>
 

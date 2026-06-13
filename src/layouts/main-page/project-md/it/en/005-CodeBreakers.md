@@ -23,11 +23,11 @@ Un mini jeu à la narration décalée et absurde, faisant la parodie du lycée o
 
 Ce projet a été pour moi l'occasion de mêler créativité, narration et code. Il a fallu faire preuve d'innovation pour certains aspects tels que la gestion d'une mini carte, un système de dialogues, et une notion de caméra qui suit le joueur et positionne correctement les éléments selon l'emplacement de cette dernière. De façon autodidacte, j'ai également pu comprendre le fonctionnement de l'héritage en développement.
 
-![Image de gameplay 1](../../../../assets/code-breakers-project-gameplay-1.png)
-![Image de gameplay 2](../../../../assets/code-breakers-project-gameplay-2.png)
-![Image de gameplay 3](../../../../assets/code-breakers-project-gameplay-3.png)
-![Image de gameplay 4](../../../../assets/code-breakers-project-gameplay-4.png)
-![Image de gameplay 5](../../../../assets/code-breakers-project-gameplay-5.png)
-![Image de gameplay 6](../../../../assets/code-breakers-project-gameplay-6.png)
-![Tileset du jeu](../../../../assets/code-breakers-project-tileset.png)
-![Cartes du jeu](../../../../assets/code-breakers-project-maps.png)
+![Image de gameplay 1](../../../../../assets/code-breakers-project-gameplay-1.png)
+![Image de gameplay 2](../../../../../assets/code-breakers-project-gameplay-2.png)
+![Image de gameplay 3](../../../../../assets/code-breakers-project-gameplay-3.png)
+![Image de gameplay 4](../../../../../assets/code-breakers-project-gameplay-4.png)
+![Image de gameplay 5](../../../../../assets/code-breakers-project-gameplay-5.png)
+![Image de gameplay 6](../../../../../assets/code-breakers-project-gameplay-6.png)
+![Tileset du jeu](../../../../../assets/code-breakers-project-tileset.png)
+![Cartes du jeu](../../../../../assets/code-breakers-project-maps.png)

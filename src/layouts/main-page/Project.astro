@@ -5,8 +5,22 @@ import ProjectCard from '../../components/ProjectCard.astro';
 const images = import.meta.glob<{ default: { src: string } }>('../../assets/*.{png,jpg,jpeg,gif}', { eager: true });
 
 console.log(Object.keys(images));
-const itProjectMdFiles = await Astro.glob('./project-md/it/*.md');
-const otherProjectMdFiles = await Astro.glob('./project-md/other/*.md');
+
+const { t } = Astro.props;
+
+const itProjectMdFilesByLang = {
+    fr: await Astro.glob('./project-md/it/fr/*.md'),
+    en: await Astro.glob('./project-md/it/en/*.md')
+};
+
+const otherProjectMdFilesByLang = {
+    fr: await Astro.glob('./project-md/other/fr/*.md'),
+    en: await Astro.glob('./project-md/other/en/*.md')
+};
+
+const lang = t.lang === 'en' ? 'en' : 'fr';
+const itProjectMdFiles = itProjectMdFilesByLang[lang];
+const otherProjectMdFiles = otherProjectMdFilesByLang[lang];
 
 const projectSections = [
     {
