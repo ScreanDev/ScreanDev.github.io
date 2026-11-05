@@ -1,0 +1,33 @@
+{
+  "name": "screandev-github-io",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.2",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@tailwindcss/vite": "^4.3.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "astro": "^7.4.5",
+    "autoprefixer": "^10.6.2",
+    "framer-motion": "^14.9.1",
+    "gsap": "^3.15.1",
+    "postcss": "^8.5.32",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sass": "^1.107.1",
+    "tailwindcss": "^4.3.4",
+    "three": "^0.187.0"
+  }
+}

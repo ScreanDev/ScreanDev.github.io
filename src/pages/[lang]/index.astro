@@ -1,0 +1,28 @@
+---
+import Welcome from '../../components/Welcome.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import fr from '../../i18n/fr.json';
+import en from '../../i18n/en.json';
+
+export function getStaticPaths() {
+  return [
+    // Generate page /fr/
+    { params: { lang: 'fr' }, props: { t: fr } },
+    // Generate page /en/
+    { params: { lang: 'en' }, props: { t: en } }
+  ];
+}
+
+const { lang } = Astro.params;
+const { t } = Astro.props;
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<BaseLayout t={t}>
+    <h1 class="text-3xl font-bold underline">
+        {t.introducing.mainBigTitle}
+    </h1>
+</BaseLayout>
